@@ -17,3 +17,28 @@ def addItem():
     ListItems.append(item)
     
 
+def deleteItems():
+    if not ListItems:
+        print('The list is empty. Invalid input.')
+        return 
+    
+    # Display list then prompt the user to enter the number that corresponds to the item. 
+
+    displayList()
+    option = input('Enter the number that corresponds to the element you would like to delete')
+
+    # remove the element at 'option' index
+
+    option = option - 1
+
+    ListItems.pop(option)
+    print('Here is the new list: ')
+    displayList()
+
+         
+def displayList():
+     for item in ListItems:
+        i = 0
+        print(f'{i}.' + item)
+    
+    
