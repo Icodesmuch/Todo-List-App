@@ -9,6 +9,7 @@
 
 
 ListItems = []
+completedItems = []
 
 
 def addItem():
