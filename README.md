@@ -23,12 +23,12 @@ This is a simple **command-line To-Do List application** that allows users to **
 1. Ensure you have **Python 3** installed.  
 2. Download or clone this repository.  
    ```bash
-   git clone https://github.com/your-username/todo-cli.git
+   git clone https://github.com/your-username/Todo-List-App
    cd todo-cli
    ```
 3. Run the script:  
    ```bash
-   python todo.py
+   python todo_list_app.py
    ```
 
 ## **Usage**  
