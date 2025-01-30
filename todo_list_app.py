@@ -12,8 +12,8 @@ ListItems = []
 completedItems = []
 
 
-def addItem():
-    item = input('Add list Item: ')
+def addItem(item):
+    
     ListItems.append(item)
     
 
@@ -50,4 +50,12 @@ def markTask():
     completedItems.append(item)
     
     
-    
+
+def toDoApp():
+    item = input('Add list Item: ')
+    print()
+    while True:
+
+        addItem()
+        
+
