@@ -34,8 +34,8 @@ def deleteItems():
     displayList()
 
          
-def displayList():
-     for item in ListItems:
+def displayList(List):
+     for item in List:
         i = 0
         print(f'{i}.' + item)
 
@@ -52,10 +52,56 @@ def markTask():
     
 
 def toDoApp():
-    item = input('Add list Item: ')
-    print()
     while True:
+        print('TO-DO LIST')
+        print('1. Enter Task.')
+        print('2. Delete Task.')
+        print('3. Mark Task As Completed.')
+        print('4. Display List.')
+        print('5. Display Completed List.')
+        print('6. Exit Program.')
+        option = input()
 
-        addItem()
+
+        if option == '1':
+
+            while True:
+                item = input("Add list Item. (Enter 'quit' to end): ")
+                if item == 'quit':
+                    break
+                addItem(item)
+                print('Item Added Succesfully.')
+
+
+        elif option == '2':
+            deleteItems()
+            print('Item Deleted.')
+
+
+        elif option == '3':
+            markTask()
+            print('Task Marked As Completed.') 
+
+
+        elif option == '4':
+            displayList(ListItems)
+
+
+        elif option == '5':
+            displayList(completedItems)
+
+
+        elif option == '6':
+            print('Have a good day :)') 
+            break
+
+
         
 
+
+
+    
+
+        
+
+toDoApp()
