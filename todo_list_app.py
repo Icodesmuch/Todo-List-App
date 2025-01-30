@@ -35,9 +35,10 @@ def deleteItems():
 
          
 def displayList(List):
+     i = 1
      for item in List:
-        i = 0
         print(f'{i}.' + item)
+        i += 1
 
 
 def markTask():
@@ -96,12 +97,5 @@ def toDoApp():
             break
 
 
-        
-
-
-
-    
-
-        
-
-toDoApp()
+if __name__ == "__main__":
+    toDoApp()
