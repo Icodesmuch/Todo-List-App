@@ -45,7 +45,7 @@ def markTask():
 
     displayList()
     
-    option = input('Enter the number that corresponds to the element you want to mark as completed.')
+    option = input('Enter the number that corresponds to the element you want to mark as completed: ')
     item = ListItems.pop(option - 1)
     completedItems.append(item)
     
