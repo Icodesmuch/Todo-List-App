@@ -24,29 +24,29 @@ def deleteItems():
     
     # Display list then prompt the user to enter the number that corresponds to the item. 
 
-    displayList()
-    option = input('Enter the number that corresponds to the element you would like to delete.')
+    displayList(ListItems)
+    option = int(input('Enter the number that corresponds to the element you would like to delete.'))
 
     # remove the element at 'option' index
 
     ListItems.pop(option - 1)
     print('Here is the new list: ')
-    displayList()
+    displayList(ListItems)
 
          
 def displayList(List):
      i = 1
      for item in List:
-        print(f'{i}.' + item)
+        print(f'\n{i}.' + item)
         i += 1
 
 
 def markTask():
 
 
-    displayList()
+    displayList(ListItems)
     
-    option = input('Enter the number that corresponds to the element you want to mark as completed: ')
+    option = int(input('Enter the number that corresponds to the element you want to mark as completed: '))
     item = ListItems.pop(option - 1)
     completedItems.append(item)
     
@@ -54,14 +54,14 @@ def markTask():
 
 def toDoApp():
     while True:
-        print('TO-DO LIST')
+        print('\nTO-DO LIST APP')
         print('1. Enter Task.')
         print('2. Delete Task.')
         print('3. Mark Task As Completed.')
         print('4. Display List.')
         print('5. Display Completed List.')
         print('6. Exit Program.')
-        option = input()
+        option = str(input())
 
 
         if option == '1':
@@ -85,10 +85,12 @@ def toDoApp():
 
 
         elif option == '4':
+            print('\n\t***************To-Do Items***************')
             displayList(ListItems)
 
 
         elif option == '5':
+            print('\n\t***************Completed Items***************')
             displayList(completedItems)
 
 
