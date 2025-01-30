@@ -1,6 +1,3 @@
-# To-do-CLI-App
-
-
 # **To-Do List CLI App**  
 
 ## **Overview**  
