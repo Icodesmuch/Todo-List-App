@@ -25,13 +25,11 @@ def deleteItems():
     # Display list then prompt the user to enter the number that corresponds to the item. 
 
     displayList()
-    option = input('Enter the number that corresponds to the element you would like to delete')
+    option = input('Enter the number that corresponds to the element you would like to delete.')
 
     # remove the element at 'option' index
 
-    option = option - 1
-
-    ListItems.pop(option)
+    ListItems.pop(option - 1)
     print('Here is the new list: ')
     displayList()
 
@@ -40,5 +38,16 @@ def displayList():
      for item in ListItems:
         i = 0
         print(f'{i}.' + item)
+
+
+def markTask():
+
+
+    displayList()
+    
+    option = input('Enter the number that corresponds to the element you want to mark as completed.')
+    item = ListItems.pop(option - 1)
+    completedItems.append(item)
+    
     
     
